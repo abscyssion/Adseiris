@@ -1,0 +1,22 @@
+{
+  "name": "adseiris",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ex00o/Adseiris.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ex00o/Adseiris/issues"
+  },
+  "homepage": "https://github.com/ex00o/Adseiris#readme",
+  "dependencies": {
+    "sql.js": "^1.7.0"
+  }
+}

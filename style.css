@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap");
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html {
+  --jet: #363636ff;
+  --gunmetal: #242f40ff;
+  --satin-sheen-gold: #cca43bff;
+  --platinum: #e5e5e5ff;
+  --lightgrey: #a9a8a8;
+  --grey: #6e6e6e;
+  --white: #ffffffff;
+}
+body {
+  margin: 0px;
+  overflow: hidden;
+  scrollbar-width: none;
+  font-family: "Merriweather", serif;
+  color: var(--jet);
+  font-size: 13px;
+}
+header {
+  display: block;
+  position: fixed;
+  height: 5vh;
+  width: 100vw;
+  background-color: var(--jet);
+  color: var(--platinum);
+  box-shadow: 0px 1px 20px var(--jet);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 5vh;
+}
+#header-right {
+  position: relative;
+  float: right;
+  margin-right: 30px;
+}
+
+section {
+  width: 100vw;
+  height: 92vh;
+  padding-top: 60px;
+}
+.section {
+  display: none;
+}
+#section-start {
+  display: inline-block;
+}
+#container > * {
+  opacity: 0;
+}
+#section-start h1 {
+  animation: 1s ease-out 0.5s 1 slideInFromLeft;
+  animation-fill-mode: forwards;
+}
+#start-title-box {
+  display: inline-block;
+  text-align: center;
+
+  animation: 1s ease-out 0.5s 1 slideInFromLeft;
+  animation-fill-mode: forwards;
+
+  font-size: 16px;
+}
+#container button {
+  animation: 1s ease-out 1.5s 1 fadeIn;
+  animation-fill-mode: forwards;
+}
+#start-title-box b {
+  font-size: larger;
+}
+#start-title-box i {
+  font-size: smaller;
+}
+#about-wrapper {
+  height: 99%;
+  margin: 0px 50px;
+}
+#about-wrapper article {
+  width: 70%;
+  margin-bottom: 70px;
+}
+#about-wrapper article h1 {
+  font-size: 30px;
+  margin: 20px 0px;
+}
+#about-wrapper article:first-of-type h1 {
+  font-size: 50px;
+}
+#about-wrapper i {
+  font-weight: 500;
+  font-size: 0.4em;
+  letter-spacing: 1px;
+  font-family: "IM Fell Great Primer", serif;
+}
+ul {
+  padding-left: 15px;
+}
+a {
+  color: var(--jet);
+}
+a:active {
+  color: black;
+}
+#container {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  color: var(--jet);
+  font-size: xxx-large;
+}
+.btn {
+  height: 40px;
+  width: 120px;
+  text-decoration: none;
+  border: 1px solid var(--gunmetal);
+  background-color: var(--platinum);
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 30%;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: #fff 3px 3px 0 0, var(--jet) 3px 3px 0 1px;
+  box-sizing: border-box;
+}
+.btn:hover {
+  background-color: var(--lightgrey);
+  transition: background-color 0.2s;
+}
+.btn:active {
+  background-color: var(--grey);
+  transition: background-color 0.2s;
+}
