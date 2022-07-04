@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 @keyframes slideInFromLeft {
   0% {
@@ -26,7 +27,7 @@
 html {
   --jet: #363636ff;
   --gunmetal: #242f40ff;
-  --satin-sheen-gold: #cca43bff;
+  --gold: #cca43bff;
   --platinum: #e5e5e5ff;
   --lightgrey: #a9a8a8;
   --grey: #6e6e6e;
@@ -45,11 +46,31 @@ header {
   position: fixed;
   height: 5vh;
   width: 100vw;
-  background-color: var(--jet);
   color: var(--platinum);
   box-shadow: 0px 1px 20px var(--jet);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 5vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 4vh;
+
+  
+  background: linear-gradient(0deg,
+   var(--gold) 12%,
+    var(--gunmetal) 0 )
+}
+header >*>*
+{
+  margin: 0%;
+}
+#header-left
+{
+  position: relative;
+  float:left;
+  margin-left: 5px;
+  font-family: 'EB Garamond', serif ;
+  font-size: 1.3em;
+  text-shadow: -2px 2px 1px black;
 }
 #header-right {
   position: relative;
@@ -101,6 +122,8 @@ section {
 #about-wrapper article {
   width: 70%;
   margin-bottom: 70px;
+  list-style-type: none;
+  list-style-position: inside;
 }
 #about-wrapper article h1 {
   font-size: 30px;
@@ -116,7 +139,7 @@ section {
   font-family: "IM Fell Great Primer", serif;
 }
 ul {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 a {
   color: var(--jet);
@@ -131,7 +154,7 @@ a:active {
   color: var(--jet);
   font-size: xxx-large;
 }
-.btn {
+button {
   height: 40px;
   width: 120px;
   text-decoration: none;
@@ -139,17 +162,17 @@ a:active {
   background-color: var(--platinum);
 
   font-family: "Open Sans", sans-serif;
-  font-size: 30%;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
   box-shadow: #fff 3px 3px 0 0, var(--jet) 3px 3px 0 1px;
   box-sizing: border-box;
 }
-.btn:hover {
+button:hover {
   background-color: var(--lightgrey);
   transition: background-color 0.2s;
 }
-.btn:active {
+button:active {
   background-color: var(--grey);
   transition: background-color 0.2s;
 }
