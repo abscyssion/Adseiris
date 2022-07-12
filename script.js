@@ -1,25 +1,7 @@
-var db;
-
-initSqlJs().then(function () {
-  const sqlPromise = initSqlJs();
-
-  const dataPromise = fetch("db.sqlite").then((res) => res.arrayBuffer());
-  Promise.all([sqlPromise, dataPromise]).then(([SQL, buf]) => {
-  db = new SQL.Database(new Uint8Array(buf));
-    
-  });
-
-  // // Prepare a statement
-  // const stmt = db.prepare("SELECT * FROM Dictionary");
-  // stmt.getAsObject({$start:1, $end:1}); // {col1:1, col2:111}
-
-  // // Bind new values
-  // stmt.bind({$start:1, $end:2});
-  // while(stmt.step()) { //
-  //   const row = stmt.getAsObject();
-  //   console.log('Here is a row: ' + JSON.stringify(row));
-  // }
-});
+function changeLanguage(lang)
+{
+  $("html").lang=lang;
+}
 
 let section_id = 0;
 function scrollDown() {
